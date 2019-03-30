@@ -53,10 +53,21 @@ nav li {
 }
 
 nav span{
-  padding-left: 1.5rem;
+  padding-left: 0.9rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+.branding {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.branding img {
+  height: 1.7rem;
+}
+
 
 @media only screen and (max-width: 700px) {
   nav span {
