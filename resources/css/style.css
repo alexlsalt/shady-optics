@@ -190,11 +190,34 @@ nav span{
   width: 17rem;
   height: 14rem;
   border: 2px black solid;
+  transition: background-color 0.5s ease;
 }
 
- img:hover {
+/* img hover color */
+
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+ .image::after {
+  -ms-transition: all 500ms ease 0.1s;
+  transition: all 500ms ease 0.1s;
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  opacity: 0.7;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+ .image:hover::after {
   background-color: lightpink;
 }
+
+/* end */
 
 .products h1 {
   background-color: black;
@@ -205,13 +228,6 @@ nav span{
   position: relative;
   left: 22rem;
   bottom: 3.5rem;
-}
-
-.left {
-  opacity: 0.5;
-}
-.right {
-  opacity: 0.7;
 }
 
 @media only screen and (max-width: 960px) {
@@ -236,7 +252,6 @@ nav span{
   }
 
   .product.carousel img {
-    margin: 0.5rem;
   }
 }
 
@@ -245,8 +260,6 @@ nav span{
     left: 4rem;
   }
 }
-
-
 
 /* Footer */
 
